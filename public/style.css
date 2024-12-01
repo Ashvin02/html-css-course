@@ -1,0 +1,307 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #1b4f72;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#menu-container {
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    height: 150px;
+}
+
+#menu-container #menu {
+    background: var(--secondary-color);
+    list-style-type: none;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#menu-container #menu .menu-item {
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#menu-container #menu .menu-item li {
+    color: black;
+}
+
+main {
+    flex: 1vh;
+}
+
+.footer-container {
+    height: 85px;
+    background-color: rgb(43, 223, 226);
+}
+  
+  /* Effet de survol (hover) */
+  a:hover {
+    color: #e74c3c; /* Rouge vif lors du survol */
+    text-decoration: underline; /* Ajoute un soulignement pour accentuer */
+  }  
+  
+/* Conteneur Flexbox pour la galerie */
+.galerie {
+    display: flex; /* Active Flexbox */
+    flex-wrap: wrap; /* Permet le retour à la ligne sur petits écrans */
+    gap: 15px; /* Espacement uniforme entre les images */
+    justify-content: center; /* Centrer les images horizontalement */
+    padding: 10px; /* Ajoute un peu d'espace autour */
+    margin: 0 auto; /* Centre le conteneur sur la page */
+  }
+  
+  /* Style des images */
+  .galerie img {
+    width: 150px; /* Largeur fixe par défaut */
+    height: 150px; /* Hauteur fixe pour les placeholders */
+    object-fit: cover; /* Adapte le contenu si l'image est différente */
+    transition: transform 0.3s ease; /* Animation pour l'effet de survol */
+    border-radius: 10px; /* Coins légèrement arrondis */
+  }
+  
+  /* Effet de survol */
+  .galerie img:hover {
+    transform: scale(1.1); /* Augmente légèrement la taille */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+  }
+  
+  /* Adaptabilité pour les petits écrans */
+  @media (max-width: 768px) {
+    .galerie img {
+      width: 100px; /* Réduit la largeur des images */
+      height: 100px; /* Réduit la hauteur des images */
+    }
+  }
+  
+/* Bouton */
+.btn {
+    background-color: #3498db; /* Couleur initiale */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Supprime les bordures */
+    padding: 15px 30px; /* Espacement interne */
+    font-size: 1.2em; /* Taille du texte */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition pour le survol */
+  }
+  
+  /* Effet de survol pour le bouton */
+  .btn:hover {
+    background-color: #1abc9c; /* Couleur de fond au survol */
+    transform: scale(1.1); /* Agrandissement léger */
+  }
+  
+  /* Image */
+  .image-container {
+    text-align: center; /* Centre l'image */
+    margin-top: 20px;
+  }
+  
+  .image {
+    width: 300px; /* Taille initiale de l'image */
+    border: 5px solid transparent; /* Bordure transparente initiale */
+    transition: border-color 0.3s ease, transform 0.3s ease; /* Transition pour le survol */
+  }
+  
+  /* Effet de survol pour l'image */
+  .image:hover {
+    border-color: #e74c3c; /* Bordure colorée au survol */
+    transform: scale(1.05); /* Agrandissement léger */
+  }
+
+  /* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* Conteneur du formulaire */
+  .formulaire {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* En-tête du formulaire */
+  .formulaire h1 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Style des labels */
+  .formulaire label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Champs de formulaire */
+  .formulaire input[type="text"],
+  .formulaire input[type="email"],
+  .formulaire textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  /* Style des cases à cocher */
+  form fieldset {
+    border: none;
+    margin-bottom: 15px;
+  }
+  
+  form fieldset legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  form label input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  /* Boutons */
+  button {
+    display: inline-block;
+    width: 48%;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  button[type="reset"] {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+
+  /* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* Conteneur du formulaire */
+  .formulaire {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* En-tête du formulaire */
+  .formulaire h1 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Style des labels */
+  .formulaire label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Champs de formulaire */
+  .formulaire input[type="text"],
+  .formulaire input[type="email"],
+  .formulaire textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  /* Style des cases à cocher */
+  form fieldset {
+    border: none;
+    margin-bottom: 15px;
+  }
+  
+  form fieldset legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  form label input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  /* Boutons */
+  button {
+    display: inline-block;
+    width: 48%;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  button[type="reset"] {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  
+  
