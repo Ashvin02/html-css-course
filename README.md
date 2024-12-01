@@ -6,7 +6,7 @@ Ce projet est un site web de **5 pages** conçu pour valider des compétences en
 ## Sommaire
 
 - [Fonctionnalités](#Fonctionnalités)
-- [Technologies utilisées](#technologies utilisées)
+- [Technologie utilisées](#technologies utilisées)
 - [Installations](#Installations)
 
 ## Fonctionnalités
